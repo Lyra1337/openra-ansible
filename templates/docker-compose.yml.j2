@@ -9,7 +9,7 @@ services:
         ports:
             - "{{ openra_port }}":"{{ openra_port }}"
         environment:
-            - Mod: ra
-            - Name: "lyRA Server 01"
-            - ListenPort: "{{ openra_port }}"
-            - AdvertiseOnline: "True"
+            - Mod=ra
+            - Name=lyRA Server 01
+            - ListenPort="{{ openra_port }}"
+            - AdvertiseOnline=True
