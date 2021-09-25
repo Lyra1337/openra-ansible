@@ -7,4 +7,9 @@ services:
         container_name: "{{ docker_container_name }}"
         restart: unless-stopped
         ports:
-            - 8123:8123
+            - "{{ openra_port }}":"{{ openra_port }}"
+        environment:
+            - Mod: ra
+            - Name: "lyRA Server 01"
+            - ListenPort: "{{ openra_port }}"
+            - AdvertiseOnline: "True"

@@ -5,6 +5,7 @@
   vars:
     ubuntu_codename: 'focal'
     docker_container_name: 'openra_server'
+    openra_port: 1234
   tasks:
   - name: Disable password prompt for sudoers
     lineinfile:
