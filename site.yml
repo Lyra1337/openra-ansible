@@ -2,6 +2,9 @@
 - name: Setup OpenRA server
   hosts: openra_server
   remote_user: root
+  vars:
+    ubuntu_codename: 'focal'
+    docker_container_name: 'openra_server'
   tasks:
   - name: Disable password prompt for sudoers
     lineinfile:
