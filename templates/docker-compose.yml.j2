@@ -10,6 +10,6 @@ services:
             - {{ openra_port }}:{{ openra_port }}
         environment:
             - Mod=ra
-            - Name=lyRA Server 01
+            - Name={{ openra_server_name }}
             - ListenPort={{ openra_port }}
             - AdvertiseOnline=True
