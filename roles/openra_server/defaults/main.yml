@@ -1,0 +1,7 @@
+---
+ubuntu_codename: 'focal'
+docker_container_name: 'openra_server'
+openra_port: 1234
+openra_server_names:
+  - "Lyra OpenRA Server 1"
+  - "Lyra OpenRA Server 2"
