@@ -9,7 +9,7 @@ services:
         container_name: "{{ docker_container_name }}_{{ current_port }}"
         restart: unless-stopped
         ports:
-            - 1234:{{ current_port }}
+            - {{ current_port }}:1234
         environment:
             - Mod=ra
             - Name={{ server_name }}
