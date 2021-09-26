@@ -58,6 +58,10 @@
     path: '/opt/docker/configs/{{ docker_container_name }}'
     state: directory
 
+- name: Stop docker services
+  docker_compose:
+    state: absent
+
 - name: Add docker-compose.yml file
   template:
     src: 'docker-compose.yml.j2'
@@ -66,5 +70,4 @@
 - name: Ensure docker services started
   docker_compose:
     project_src: '/opt/docker/configs/{{ docker_container_name }}'
-    build: no
     pull: yes
