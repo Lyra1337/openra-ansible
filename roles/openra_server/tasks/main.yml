@@ -60,6 +60,7 @@
 
 - name: Stop docker services
   docker_compose:
+    project_src: '/opt/docker/configs/{{ docker_container_name }}'
     state: absent
 
 - name: Add docker-compose.yml file
