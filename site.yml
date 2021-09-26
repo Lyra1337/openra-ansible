@@ -1,10 +1,10 @@
 ---
+
 - name: Setup OpenRA server
   hosts: openra_server
   remote_user: root
-  tasks:
-  - name: Install OpenRA
-    openra_server:
+  roles:
+  - role: openra_server
       openra_server_names:
         - "Lyra OpenRA Server 1"
         - "Lyra OpenRA Server 2"

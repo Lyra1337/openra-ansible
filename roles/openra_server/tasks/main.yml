@@ -1,3 +1,5 @@
+---
+
 - name: Disable password prompt for sudoers
   lineinfile:
     dest: "/etc/sudoers"
