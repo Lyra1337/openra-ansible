@@ -1,4 +1,5 @@
 ---
+
 ubuntu_codename: 'focal'
 docker_container_name: 'openra_server'
 openra_port: 1234
