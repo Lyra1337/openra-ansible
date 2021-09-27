@@ -4,15 +4,15 @@ version: '3.7'
 services:
 {% for server_name in openra_server_names %}
 {% set current_port = openra_port + loop.index0 %}
-    openra_{{ current_port }}:
+    openra_server_{{ current_port }}:
         image: "rmoriz/openra:latest"
         container_name: "{{ docker_container_name }}_{{ current_port }}"
         restart: unless-stopped
         ports:
-            - {{ current_port }}:1234
+            - {{ current_port }}:{{ current_port }}
         environment:
             - Mod=ra
             - Name={{ server_name }}
-            - ListenPort=1234
+            - ListenPort={{ current_port }}
             - AdvertiseOnline=True
 {% endfor %}
