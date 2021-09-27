@@ -1,13 +1,5 @@
 ---
 
-- name: Disable password prompt for sudoers
-  lineinfile:
-    dest: "/etc/sudoers"
-    state: "present"
-    regexp: "^%sudo"
-    line: "%sudo ALL=(ALL:ALL) NOPASSWD:ALL"
-    validate: 'visudo -cf %s'
-
 - name: Update and upgrade apt packages
   apt:
     update_cache: yes
