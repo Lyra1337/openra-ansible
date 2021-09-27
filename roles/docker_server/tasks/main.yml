@@ -3,7 +3,7 @@
 - name: Update and upgrade apt packages
   apt:
     update_cache: yes
-    upgrade: yes
+    upgrade: "yes"
 
 - name: install required packages for docker
   apt:
