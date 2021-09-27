@@ -4,6 +4,7 @@
   hosts: openra_server
   remote_user: root
   roles:
+  - role: docker_server
   - role: openra_server
     openra_server_names:
     - "Lyra OpenRA Server 1"
