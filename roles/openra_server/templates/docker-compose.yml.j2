@@ -13,6 +13,6 @@ services:
         environment:
             - Mod=ra
             - Name={{ server_name }}
-            - ListenPort={{ current_port }}
+            - ListenPort=1234
             - AdvertiseOnline=True
 {% endfor %}
