@@ -6,7 +6,7 @@ galaxy_info:
   license: MIT
   min_ansible_version: 1.2
   platforms:
-  - name: Ubtuntu
+  - name: Ubuntu
     versions:
       20.04
   galaxy_tags:
